@@ -7,7 +7,6 @@
 /* header */
 header {
   height: 100px;
-  background-color: aquamarine;
   align-items: center;
   display: flex;
 }
@@ -30,10 +29,10 @@ ul {
 ul li a {
   text-decoration: none;
   padding: 20px;
-  color: rgb(73, 72, 72);
+  color: rgb(71, 70, 86);
   font-family: "Oswald", serif;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /* main */
@@ -45,11 +44,31 @@ main {
   align-items: center;
 }
 
-/* footer */
+/* footer background */
 .container-blue {
   background-color: rgb(5, 131, 248);
   height: 200px;
+  position: relative;
+  z-index: 10;
 }
+
+.container-image {
+  background-image: url("./assets/img/footer-bg.jpg");
+  height: 100%;
+  position: relative;
+  background-position: bottom;
+}
+
+.container-black {
+  background-color: rgb(49, 48, 49);
+  height: 100px;
+  z-index: 10;
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+/* footer all */
 
 .footer-icon {
   display: flex;
@@ -66,25 +85,47 @@ main {
   padding-left: 10px;
 }
 
-.container-image {
-  background-image: url("./assets/img/footer-bg.jpg");
-  height: 300px;
-  position: relative;
-}
-
 .img-bg {
   position: absolute;
-  height: 360px;
+  height: 150%;
   right: 250px;
-  width: 25rem;
-  bottom: 0px;
+  bottom: -90px;
   font-size: 20px;
 }
 
-.text {
+.text-footer {
   color: white;
+  width: calc(50% / 3);
 }
 
-.text ul li a {
-  display: block;
+.text-footer ul {
+  padding: 0px;
+  display: inline-block;
+}
+
+.text-footer ul li a {
+  padding: 0px;
+  color: rgb(148, 149, 148);
+  font-family: "Open Sans", serif;
+  font-size: 11px;
+}
+
+.button {
+  border-radius: 0px;
+  border-width: 2px;
+  border-color: rgb(4, 131, 249);
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.follow {
+  color: rgb(4, 131, 249);
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.social ul li a {
+  padding: 5px;
 }
