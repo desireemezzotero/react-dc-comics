@@ -1,4 +1,6 @@
-const Header = () => {
+const Header = (props) => {
+  const menuHeader = props.menu
+
   return (
     <header>
       <div className="container">
@@ -7,36 +9,13 @@ const Header = () => {
             <img className="image" src="/favicon.ico" alt="logo" />
           </div>
           <ul>
-            <li>
-              <a href="#">CHARACTERS</a>
-            </li>
-            <li>
-              <a className="text-primary" href="#">COMICS</a>
-            </li>
-            <li>
-              <a href="#">MOVIES</a>
-            </li>
-            <li>
-              <a href="#">TV</a>
-            </li>
-            <li>
-              <a href="#">GAMES</a>
-            </li>
-            <li>
-              <a href="#">COLLECTIBLES</a>
-            </li>
-            <li>
-              <a href="#">VIDEOS</a>
-            </li>
-            <li>
-              <a href="#">FANS</a>
-            </li>
-            <li>
-              <a href="#">NEWS</a>
-            </li>
-            <li>
-              <a href="#">SHOP</a>
-            </li>
+            {menuHeader.map(item => (
+              <li key={item.id}>
+                <a href={item.url}>
+                  {item.text}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div> {/* div del container */}

@@ -1,4 +1,4 @@
-import digital from '../assets/img/buy-comics-digital-comics.png';
+
 import merchandise from '../assets/img/buy-comics-merchandise.png';
 import shop from '../assets/img/buy-comics-shop-locator.png';
 import subscriptions from '../assets/img/buy-comics-subscriptions.png';
@@ -10,14 +10,16 @@ import youTube from '../assets/img/footer-youtube.png';
 import pinterest from '../assets/img/footer-pinterest.png';
 import periscope from '../assets/img/footer-periscope.png';
 
-const Footer = () => {
+const Footer = (props) => {
+  const menuFooter = props.menu
+
   return (
     <footer>
       <div className="container-blue">
         <div className="container h-100">
           <ul className="footer-icon">
             <li>
-              <img className="image" src={digital} alt="digital" />
+              <img className="image" src='../assets/img/buy-comics-digital-comics.png' alt="digital" />
               <a href="#">DIGITAL COMICS</a>
             </li>
 
@@ -44,76 +46,79 @@ const Footer = () => {
         </div> {/* div container */}
       </div> {/* div blue */}
 
-      <div className='container-image'>
+      <div className="container-image">
         <div>
-          <img className='img-bg' src={imgBg} alt="" />
+          <img className="img-bg" src={imgBg} alt="" />
         </div>
-        <div className='container d-flex'>
-          <div className='text-footer p-4'>
+        <div className="container d-flex">
+          <div className="text-footer p-4">
             <h6>
               DC COMICS
             </h6>
            <ul>
-             <li> <a href="#"> Characters </a> </li>
-             <li> <a href="#"> Comics </a> </li>
-             <li> <a href="#"> Movies </a> </li>
-             <li> <a href="#"> TV </a> </li>
-             <li> <a href="#"> Games </a> </li>
-             <li> <a href="#"> Videos </a> </li>
-             <li> <a href="#"> News </a> </li>
+           {menuFooter.dcComics.map((item) => (
+                <li key={item.id}>
+                  <a href={item.url}>{item.text}</a>
+                </li>
+              ))
+            }            
            </ul>
 
            <h6>
              SHOP
            </h6>
            <ul>
-            <li> <a href="#"> Shop DC </a> </li>
-            <li> <a href="#"> Shop DC Collectibles </a> </li>
+            {menuFooter.shop.map((item) => (
+              <li key={item.id}>
+                <a href={item.url}>
+                 {item.text}
+                </a>
+              </li>
+             ))
+            }
            </ul>
          </div>
 
-         <div className='text-footer p-4'>
+         <div className="text-footer p-4">
             <h6>
               DC
             </h6>
            <ul>
-             <li> <a href="#"> Terms Of Use </a> </li>
-             <li> <a href="#"> Privacy policy (New) </a> </li>
-             <li> <a href="#"> Ad Choices </a> </li>
-             <li> <a href="#"> Advertising </a> </li>
-             <li> <a href="#"> Job </a> </li>
-             <li> <a href="#"> Subscriptions </a> </li>
-             <li> <a href="#"> Talent Workshops </a> </li>
-             <li> <a href="#"> CPSC Certificates </a> </li>
-             <li> <a href="#"> Ratings </a> </li>
-             <li> <a href="#"> Shop Help </a> </li>
-             <li> <a href="#"> Contact Us </a> </li>
+            {menuFooter.dc.map((item) => 
+              <li key={item.id}> 
+                <a href={item.url}> 
+                  {item.text} 
+                </a> 
+              </li>
+            )}
            </ul>
          </div>
 
-         <div className='text-footer p-4'>
+         <div className="text-footer p-4">
             <h6>
               SITES
             </h6>
            <ul>
-             <li> <a href="#"> DC </a> </li>
-             <li> <a href="#"> MAD Magazine </a> </li>
-             <li> <a href="#"> DC Kids </a> </li>
-             <li> <a href="#"> DC Universe </a> </li>
-             <li> <a href="#"> DC Power Visa </a> </li>
+            {menuFooter.sities.map((item) => 
+              <li key={item.id}> 
+                <a href={item.url}> 
+                  {item.text} 
+                </a> 
+              </li>
+            )}
            </ul>
          </div>
         </div>
       </div>
 
-      <section className='container-black'>
-        <div className='container justify-content-between d-flex'>
-          <div className='btn'>
-            <button type="button" class="btn btn-outline-primary button">SIGN-UP NOW!</button>
+      <section className="container-black">
+        <div className="container justify-content-between d-flex">
+          <div className="btn">
+            <button type="button" className="btn btn-outline-primary button">SIGN-UP NOW!</button>
           </div>
 
-          <div className='social d-flex'>
-            <h6 className= 'follow'>FOLLOW US</h6>
+          <div className="social d-flex"> 
+            <h6 className= "follow">FOLLOW US</h6>
             <ul> 
               <li> <a href="#"><img src={facebook} alt="facebook" /></a> </li>
               <li> <a href="#"><img src={twitter} alt="twittwe" /></a> </li>
