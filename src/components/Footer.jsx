@@ -1,4 +1,4 @@
-
+import digital from '../assets/img/buy-comics-digital-comics.png';
 import merchandise from '../assets/img/buy-comics-merchandise.png';
 import shop from '../assets/img/buy-comics-shop-locator.png';
 import subscriptions from '../assets/img/buy-comics-subscriptions.png';
@@ -19,7 +19,7 @@ const Footer = (props) => {
         <div className="container h-100">
           <ul className="footer-icon">
             <li>
-              <img className="image" src='../assets/img/buy-comics-digital-comics.png' alt="digital" />
+              <img className="image" src={digital} alt="digital" />
               <a href="#">DIGITAL COMICS</a>
             </li>
 
