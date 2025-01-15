@@ -9,6 +9,7 @@ header {
   height: 100px;
   align-items: center;
   display: flex;
+  position: relative;
 }
 
 nav {
@@ -24,30 +25,104 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+
+  li a {
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(71, 70, 86);
+    font-family: "Oswald", serif;
+    font-weight: 600;
+    font-size: 11px;
+    align-items: center;
+    display: flex;
+  }
 }
 
-ul li a {
-  text-decoration: none;
-  padding: 20px;
-  color: rgb(71, 70, 86);
-  font-family: "Oswald", serif;
-  font-weight: 600;
-  font-size: 11px;
+.active {
+  color: rgb(4, 131, 249);
+  border-bottom: 2px solid rgb(4, 131, 249);
 }
 
 /* main */
 main {
-  background-color: black;
+  background-color: rgb(28, 28, 28);
+  position: relative;
+  z-index: 10;
+}
+
+.jumbotron {
+  height: 305px;
+
+  .jumbotron-img {
+    height: max-content;
+    width: 100%;
+  }
+}
+
+.container-main {
+  background-color: rgb(28, 28, 28);
   color: white;
-  height: 100px;
-  display: flex;
-  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+  h4 {
+    background-color: rgb(4, 131, 249);
+    color: white;
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Oswald", serif;
+    font-size: 23px;
+    position: absolute;
+    top: -23px;
+  }
+
+  .btn {
+    padding: 5px 50px;
+    background-color: rgb(4, 131, 249);
+    color: white;
+    border-radius: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* card */
+.structureCard {
+  width: calc((100% / 7) - 10px);
+  height: 220px;
+  margin: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  p {
+    padding: 0px;
+    font-family: "Open Sans", serif;
+    font-size: 13px;
+    padding-top: 14px;
+  }
+}
+
+.img-card {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 /* footer background */
 .container-blue {
   background-color: rgb(5, 131, 248);
-  height: 200px;
+  height: 130px;
   position: relative;
   z-index: 10;
 }
@@ -76,13 +151,13 @@ main {
   padding: 10px;
   align-items: center;
   height: 100%;
-}
 
-.footer-icon li a {
-  font-family: "Open Sans", serif;
-  color: white;
-  padding: 30px;
-  padding-left: 10px;
+  li a {
+    font-family: "Open Sans", serif;
+    color: white;
+    padding: 30px;
+    padding-left: 10px;
+  }
 }
 
 .img-bg {
@@ -96,18 +171,18 @@ main {
 .text-footer {
   color: white;
   width: calc(50% / 3);
-}
 
-.text-footer ul {
-  padding: 0px;
-  display: inline-block;
-}
+  ul {
+    padding: 0px;
+    display: inline-block;
+  }
 
-.text-footer ul li a {
-  padding: 0px;
-  color: rgb(148, 149, 148);
-  font-family: "Open Sans", serif;
-  font-size: 11px;
+  li a {
+    padding: 0px;
+    color: rgb(148, 149, 148);
+    font-family: "Open Sans", serif;
+    font-size: 11px;
+  }
 }
 
 .button {

@@ -1,6 +1,6 @@
 const menuHeader = [
   { id: 1, url: "#", text: "CHARACTERS" },
-  { id: 2, url: "#", text: "COMICS" },
+  { id: 2, url: "#", text: "COMICS" , isActive:"true" },
   { id: 3, url: "#", text: "MOVIES" },
   { id: 4, url: "#", text: "TV" },
   { id: 5, url: "#", text: "GAMES" },
