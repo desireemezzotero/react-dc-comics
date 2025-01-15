@@ -19,27 +19,37 @@ const Footer = (props) => {
         <div className="container h-100">
           <ul className="footer-icon">
             <li>
-              <img className="image" src={digital} alt="digital" />
+              <div className="box-img">
+               <img className="image" src={digital} alt="digital" />
+              </div>
               <a href="#">DIGITAL COMICS</a>
             </li>
 
             <li>
+            <div className="box-img">
               <img className="image" src={merchandise} alt="digital" />
+            </div>
               <a href="#">DC MERCHANDISE</a>
             </li>
 
             <li>
+            <div className="box-img">
               <img className="image" src={subscriptions} alt="digital" />
+            </div>
               <a href="#">SUBSCRIPTION</a>
             </li>
 
             <li>
+            <div className="box-img">
               <img className="image" src={shop} alt="digital" />
+            </div>
               <a href="#">COMIC SHOP LOCATOR</a>
             </li>
 
             <li>
+            <div className="box-img">
               <img className="image" src={pay} alt="digital" />
+            </div>
               <a href="#">DC POWER VISA</a>
             </li>
           </ul>
