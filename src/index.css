@@ -183,6 +183,9 @@ main {
   color: white;
   width: calc(50% / 3);
 
+  h6 {
+    font-family: "Oswald", serif;
+  }
   ul {
     padding: 0px;
     display: inline-block;
