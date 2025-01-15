@@ -9,7 +9,6 @@ header {
   height: 100px;
   align-items: center;
   display: flex;
-  position: relative;
 }
 
 nav {
@@ -40,7 +39,6 @@ ul {
 
 .active {
   color: rgb(4, 131, 249);
-  border-bottom: 2px solid rgb(4, 131, 249);
 }
 
 /* main */
@@ -152,6 +150,10 @@ main {
   align-items: center;
   height: 100%;
 
+  li {
+    display: flex;
+  }
+
   li a {
     font-family: "Open Sans", serif;
     color: white;
@@ -164,7 +166,7 @@ main {
   position: absolute;
   height: 150%;
   right: 250px;
-  bottom: -90px;
+  bottom: -72px;
   font-size: 20px;
 }
 
